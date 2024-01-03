@@ -53,12 +53,19 @@
     });
 
 
-    // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
     
+
+    $(document).ready(function () {
+        $('[data-toggle="counter-up"]').counterUp({
+          delay: 10,
+          time: 2000,
+          suffix: "+", // Specify the suffix here
+          complete: function () {
+            // Your callback function
+          },
+        });
+      });
+      
     
     // Back to top button
     // $(window).scroll(function () {
